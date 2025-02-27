@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
+import { ThemeToggle } from './ThemeToggle';
 import { ArrowDownToLine, Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
@@ -35,7 +36,7 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm border-b border-border/40' : 'bg-transparent'
+        isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-sm border-b border-border/40 dark:bg-background/50' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -61,30 +62,36 @@ const Navbar: React.FC = () => {
                 )}
               </Link>
             ))}
-            <a
-              href="/resume.pdf"
-              download="Krishna_Chaitanya_Resume.pdf"
-              className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30"
-            >
-              <ArrowDownToLine size={16} />
-              <span>Resume</span>
-            </a>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <a
+                href="/resume.pdf"
+                download="Krishna_Chaitanya_Resume.pdf"
+                className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30"
+              >
+                <ArrowDownToLine size={16} />
+                <span>Resume</span>
+              </a>
+            </div>
           </nav>
 
           {/* Mobile Navigation Toggle */}
-          <button
-            className="md:hidden rounded-lg p-2 text-foreground"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              className="rounded-lg p-2 text-foreground"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 w-full bg-white/95 backdrop-blur-lg border-b border-border animate-slide-down shadow-lg">
+        <div className="md:hidden absolute top-16 w-full bg-background/95 dark:bg-background/90 backdrop-blur-lg border-b border-border animate-slide-down shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col gap-3">
               {navLinks.map((link) => (

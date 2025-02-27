@@ -52,15 +52,15 @@ const HeroSection: React.FC = () => {
     <section className="relative min-h-screen flex items-center">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-[300px] h-[300px] bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-[300px] h-[300px] bg-primary/10 dark:bg-primary/20 rounded-full blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
         <div className="grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 space-y-6">
             <div className="flex items-center">
-              <div className="inline-block px-3 py-1 bg-accent rounded-full text-sm font-medium text-primary animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="inline-block px-3 py-1 bg-accent dark:bg-accent/50 rounded-full text-sm font-medium text-primary animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 Welcome to my portfolio
               </div>
             </div>
@@ -89,7 +89,7 @@ const HeroSection: React.FC = () => {
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-accent text-primary px-6 py-3 rounded-lg font-medium transition-colors hover:bg-accent/70"
+                className="inline-flex items-center justify-center gap-2 bg-accent text-primary px-6 py-3 rounded-lg font-medium transition-colors hover:bg-accent/70 dark:bg-accent/30 dark:hover:bg-accent/50"
               >
                 Get In Touch
               </Link>
@@ -98,7 +98,7 @@ const HeroSection: React.FC = () => {
           
           <div className="md:col-span-5 flex justify-center">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-primary/10 backdrop-blur-sm animate-float"></div>
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-primary/10 dark:bg-primary/20 backdrop-blur-sm animate-float"></div>
               <div className="absolute inset-0 flex items-center justify-center font-bold text-6xl md:text-7xl text-primary/90">
                 KC
               </div>
