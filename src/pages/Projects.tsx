@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
         "A fast and efficient URL shortener built with Next.js and Prisma (PostgreSQL).",
       technologies: ["Next.js", "Prisma", "PostgreSQL"],
       githubUrl: "https://github.com/kcdevv/url-shortener",
-      liveUrl: "https://kcdev.tech",
+      liveUrl: "https://url.kcdev.tech",
     },
     {
       id: 3,
@@ -71,6 +71,7 @@ const Projects: React.FC = () => {
         "A faucet for airdropping SOL with wallet integrations like Phantom and Backpack.",
       technologies: ["Solana", "Express", "Web3.js", "Phantom Wallet"],
       githubUrl: "https://github.com/kcdevv/solana-faucet",
+      liveUrl: "https://faucet.kcdev.tech",
     },
     {
       id: 8,
