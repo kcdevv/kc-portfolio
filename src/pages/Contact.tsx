@@ -8,19 +8,19 @@ const Contact: React.FC = () => {
     {
       icon: <Mail className="text-primary" size={20} />,
       label: "Email",
-      value: "krishnachaitanya@example.com",
-      link: "mailto:krishnachaitanya@example.com"
+      value: "krishnackattoju@gmail.com",
+      link: "mailto:krishnackattoju@gmail.com"
     },
     {
       icon: <Phone className="text-primary" size={20} />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+91 6300685726",
+      link: "tel:+916300685726"
     },
     {
       icon: <MapPin className="text-primary" size={20} />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Hyderabad, India",
       link: null
     }
   ];
@@ -29,12 +29,12 @@ const Contact: React.FC = () => {
     {
       name: "GitHub",
       icon: <Github size={20} />,
-      url: "https://github.com/"
+      url: "https://github.com/kcdevv"
     },
     {
       name: "LinkedIn",
       icon: <Linkedin size={20} />,
-      url: "https://linkedin.com/"
+      url: "https://linkedin.com/in/krishnachaitanyakattoju"
     }
   ];
 

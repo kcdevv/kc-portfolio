@@ -1,50 +1,76 @@
-
-import React from 'react';
-import { ArrowDownToLine, ArrowRight, Briefcase, GraduationCap, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import {
+  ArrowDownToLine,
+  ArrowRight,
+  Briefcase,
+  GraduationCap,
+  Award,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   const skills = [
-    "JavaScript/TypeScript", "React.js", "Next.js", "Node.js", 
-    "Solidity", "Web3.js/Ethers.js", "Blockchain Development",
-    "Smart Contracts", "DeFi", "NFTs", "Tailwind CSS", "MongoDB",
-    "PostgreSQL", "GraphQL", "REST APIs", "AWS", "Docker"
+    "JavaScript/TypeScript",
+    "Python",
+    "C++",
+    "React.js",
+    "Next.js",
+    "React Native",
+    "Node.js",
+    "Express.js",
+    "Hono",
+    "Web3.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Prisma",
+    "GraphQL",
+    "REST APIs",
+    "AWS",
+    "Cloudflare Workers",
+    "Docker",
+    "Kubernetes",
+    "Redis",
+    "CI/CD (GitHub Actions, Jenkins)",
+    "WebSockets",
+    "Web Scraping",
+    "Tailwind CSS",
+    "Turborepo",
   ];
 
   const experiences = [
     {
-      title: "Senior Blockchain Developer",
-      company: "DeFi Labs",
-      period: "2021 - Present",
-      description: "Developing and auditing smart contracts for DeFi protocols. Building user interfaces for decentralized applications with React and Web3 libraries."
+      title: "Open Source Contributor",
+      company: "GirlScript Foundation",
+      period: "10/2024 - 11/2024",
+      description:
+        "Contributed to open-source projects by developing and optimizing full-stack web applications using the MERN stack. Worked on building dynamic user interfaces, improving API performance, and enhancing code quality.",
     },
-    {
-      title: "Full Stack Developer",
-      company: "FinTech Solutions",
-      period: "2018 - 2021",
-      description: "Designed and implemented financial applications with React, Node.js, and SQL databases. Integrated with financial APIs and payment gateways."
-    },
-    {
-      title: "Frontend Developer",
-      company: "Web Innovators",
-      period: "2016 - 2018",
-      description: "Created responsive and accessible user interfaces using modern JavaScript frameworks and CSS preprocessors."
-    }
   ];
 
   const education = [
     {
-      degree: "Master of Computer Science",
-      institution: "Tech University",
-      year: "2016",
-      description: "Specialized in Distributed Systems and Advanced Algorithms."
+      degree: "Bachelor of Technology in Computer Science",
+      institution: "TKR College of Engineering & Technology",
+      year: "2022 - Present",
+      description:
+        "Studying core computer science subjects, including Data Structures, Algorithms, Web Development, and Distributed Systems.",
     },
     {
-      degree: "Bachelor of Engineering in Computer Science",
-      institution: "Engineering College",
-      year: "2014",
-      description: "Graduated with honors. Focus on software engineering and data structures."
-    }
+      degree: "Intermediate (MPC)",
+      institution: "Sri Vagdevi Junior College",
+      year: "2022",
+      description:
+        "Graduated with 92.7% in Mathematics, Physics, and Chemistry (MPC). Strong foundation in analytical problem-solving and logical reasoning.",
+    },
+  ];
+
+  const certifications = [
+    { title: "Python for Datascience", issuer: "NPTEL" },
+    { title: "Automate Cybersecurity Tasks using Python", issuer: "Coursera" },
+    {
+      title: "Introduction to Programming in C",
+      issuer: "NPTEL",
+    },
   ];
 
   return (
@@ -54,23 +80,41 @@ const About: React.FC = () => {
           <div className="inline-block px-3 py-1 bg-accent rounded-full text-sm font-medium text-primary mb-4 animate-fade-in">
             About Me
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1
+            className="text-4xl md:text-5xl font-bold mb-5 animate-fade-in"
+            style={{ animationDelay: "0.1s" }}
+          >
             Krishna Chaitanya Kattoju
           </h1>
-          <p className="text-lg text-muted-foreground animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p
+            className="text-lg text-muted-foreground animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
             Full Stack Developer specializing in Web3 and Finance
           </p>
         </div>
-        
+
         <div className="max-w-4xl mx-auto">
           {/* About Section */}
-          <section className="mb-16 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <section
+            className="mb-16 animate-fade-in"
+            style={{ animationDelay: "0.3s" }}
+          >
             <p className="text-lg leading-relaxed mb-5">
-              I'm a passionate full stack developer with extensive experience in modern web technologies and a focus on blockchain applications and financial systems. With a strong foundation in both frontend and backend development, I create robust, user-friendly applications that solve real-world problems.
+              I'm a passionate full-stack developer with expertise in modern web
+              technologies, specializing in building scalable and user-friendly
+              applications. With a strong foundation in both frontend and
+              backend development, I create seamless digital experiences that
+              solve real-world problems.
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              My journey in web3 began several years ago when I recognized the transformative potential of blockchain technology. Since then, I've been building decentralized applications, smart contracts, and bridges between traditional finance and the emerging DeFi ecosystem.
+              My journey in tech started with a deep interest in web
+              development, which later expanded to real-time applications, cloud
+              computing, and distributed systems. I enjoy working on innovative
+              projects, from interactive web platforms to backend
+              infrastructure, ensuring efficiency and scalability.
             </p>
+
             <div className="flex justify-center mt-8">
               <a
                 href="/resume.pdf"
@@ -82,9 +126,12 @@ const About: React.FC = () => {
               </a>
             </div>
           </section>
-          
+
           {/* Skills Section */}
-          <section className="mb-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <section
+            className="mb-16 animate-fade-in"
+            style={{ animationDelay: "0.4s" }}
+          >
             <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill, index) => (
@@ -97,14 +144,17 @@ const About: React.FC = () => {
               ))}
             </div>
           </section>
-          
+
           {/* Experience Section */}
-          <section className="mb-16 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <section
+            className="mb-16 animate-fade-in"
+            style={{ animationDelay: "0.5s" }}
+          >
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Briefcase size={22} className="text-primary" />
               <span>Work Experience</span>
             </h2>
-            
+
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="glass-card rounded-xl p-6">
@@ -120,14 +170,17 @@ const About: React.FC = () => {
               ))}
             </div>
           </section>
-          
+
           {/* Education Section */}
-          <section className="mb-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <section
+            className="mb-16 animate-fade-in"
+            style={{ animationDelay: "0.6s" }}
+          >
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <GraduationCap size={22} className="text-primary" />
               <span>Education</span>
             </h2>
-            
+
             <div className="space-y-6">
               {education.map((edu, index) => (
                 <div key={index} className="glass-card rounded-xl p-6">
@@ -143,39 +196,36 @@ const About: React.FC = () => {
               ))}
             </div>
           </section>
-          
+
           {/* Certifications Section */}
-          <section className="mb-16 animate-fade-in" style={{ animationDelay: '0.7s' }}>
+          <section
+            className="mb-16 animate-fade-in"
+            style={{ animationDelay: "0.7s" }}
+          >
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Award size={22} className="text-primary" />
               <span>Certifications</span>
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="glass-card rounded-xl p-5">
-                <p className="font-medium">Certified Blockchain Developer</p>
-                <p className="text-sm text-muted-foreground">Blockchain Council</p>
-              </div>
-              <div className="glass-card rounded-xl p-5">
-                <p className="font-medium">AWS Certified Developer</p>
-                <p className="text-sm text-muted-foreground">Amazon Web Services</p>
-              </div>
-              <div className="glass-card rounded-xl p-5">
-                <p className="font-medium">Smart Contract Security Auditor</p>
-                <p className="text-sm text-muted-foreground">Blockchain Security Alliance</p>
-              </div>
-              <div className="glass-card rounded-xl p-5">
-                <p className="font-medium">Full Stack Web Development</p>
-                <p className="text-sm text-muted-foreground">Tech Academy</p>
-              </div>
+              {certifications.map((cert, index) => (
+                <div key={index} className="glass-card rounded-xl p-5">
+                  <p className="font-medium">{cert.title}</p>
+                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                </div>
+              ))}
             </div>
           </section>
-          
+
           {/* CTA Section */}
-          <section className="text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <section
+            className="text-center animate-fade-in"
+            style={{ animationDelay: "0.8s" }}
+          >
             <h2 className="text-2xl font-bold mb-4">Let's Work Together</h2>
             <p className="text-muted-foreground mb-6">
-              Interested in collaborating on a project? I'd love to hear from you!
+              Interested in collaborating on a project? I'd love to hear from
+              you!
             </p>
             <Link
               to="/contact"

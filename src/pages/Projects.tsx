@@ -1,6 +1,5 @@
-
-import React from 'react';
-import ProjectCard from '@/components/ProjectCard';
+import React from "react";
+import ProjectCard from "@/components/ProjectCard";
 
 interface Project {
   id: number;
@@ -13,59 +12,88 @@ interface Project {
 }
 
 const Projects: React.FC = () => {
-  // Sample projects - replace with real projects
   const projects: Project[] = [
     {
       id: 1,
-      title: "DeFi Staking Platform",
-      description: "A decentralized finance platform for staking crypto assets and earning rewards with an intuitive UI.",
-      technologies: ["React", "Solidity", "Ethers.js", "Tailwind CSS"],
-      imageUrl: "https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2940&auto=format&fit=crop",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      title: "DocNest",
+      description:
+        "A secure document storage platform with Razorpay integration for premium features.",
+      technologies: ["MERN", "Razorpay", "AWS S3"],
+      githubUrl: "https://github.com/kcdevv/docnest-server"
     },
     {
       id: 2,
-      title: "NFT Marketplace",
-      description: "A fully-featured NFT marketplace with collection browsing, minting, and trading capabilities.",
-      technologies: ["Next.js", "TypeScript", "IPFS", "Web3.js"],
-      imageUrl: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2974&auto=format&fit=crop", 
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      title: "KCDev URL Shortener",
+      description:
+        "A fast and efficient URL shortener built with Next.js and Prisma (PostgreSQL).",
+      technologies: ["Next.js", "Prisma", "PostgreSQL"],
+      githubUrl: "https://github.com/kcdevv/url-shortener",
+      liveUrl: "https://kcdev.tech",
     },
     {
       id: 3,
-      title: "Financial Dashboard",
-      description: "Interactive dashboard for financial data visualization with real-time market data integration.",
-      technologies: ["React", "D3.js", "Node.js", "Express"],
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      title: "TKR Results Bot",
+      description:
+        "A Telegram bot that fetches student academic results using Node.js and web scraping.",
+      technologies: ["Node.js", "Python", "BeautifulSoup", "Telegram API"],
+      githubUrl: "https://github.com/kcdevv/tkr-results-bot",
+      liveUrl: "https://t.me/kcresultsbot",
     },
     {
       id: 4,
-      title: "Smart Contract Audit Tool",
-      description: "Automated tool for analyzing Solidity smart contracts for security vulnerabilities and best practices.",
-      technologies: ["Python", "Solidity", "JavaScript", "Docker"],
-      imageUrl: "https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=3132&auto=format&fit=crop",
-      githubUrl: "https://github.com",
+      title: "Realtime Code Collaborator",
+      description:
+        "A real-time collaborative code editor for developers to work together.",
+      technologies: ["React", "Node.js", "WebSockets", "CodeMirror"],
+      githubUrl: "https://github.com/kcdevv/editor",
     },
     {
       id: 5,
-      title: "Crypto Portfolio Tracker",
-      description: "Web application to track cryptocurrency investments, performance analytics, and tax reporting.",
-      technologies: ["Vue.js", "Firebase", "CoinGecko API", "Chart.js"],
-      imageUrl: "https://images.unsplash.com/photo-1631603090989-93f9ef6f9d80?q=80&w=3072&auto=format&fit=crop",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      title: "KCDev MERN CLI",
+      description:
+        "A CLI tool for quickly setting up a MERN stack project with best practices.",
+      technologies: ["Node.js", "Commander.js", "ESLint", "Prettier"],
+      githubUrl: "https://github.com/kcdevv/kcmern-cli",
+      liveUrl: "https://www.npmjs.com/package/kcmern-cli",
     },
     {
       id: 6,
-      title: "AI-Powered Trading Bot",
-      description: "Algorithmic trading bot using machine learning to execute trades on cryptocurrency markets.",
-      technologies: ["Python", "TensorFlow", "FastAPI", "MongoDB"],
-      imageUrl: "https://images.unsplash.com/photo-1642052502780-8ee67e3bf930?q=80&w=2940&auto=format&fit=crop",
-      githubUrl: "https://github.com",
+      title: "Realtime Chat App",
+      description:
+        "A MERN-based chat application using WebSockets for instant messaging.",
+      technologies: ["MERN", "WebSockets", "WS Package"],
+      githubUrl: "https://github.com/kcdevv/chatapp-ws",
+    },
+    {
+      id: 7,
+      title: "Solana Faucet",
+      description:
+        "A faucet for airdropping SOL with wallet integrations like Phantom and Backpack.",
+      technologies: ["Solana", "Express", "Web3.js", "Phantom Wallet"],
+      githubUrl: "https://github.com/kcdevv/solana-faucet",
+    },
+    {
+      id: 8,
+      title: "TKRHUB",
+      description: "A platform where users share their interview experiences.",
+      technologies: ["Node.js", "EJS", "MongoDB"],
+      githubUrl: "https://github.com/kcdevv/TKRHUB",
+    },
+    {
+      id: 9,
+      title: "Blog App (Medium Clone)",
+      description:
+        "A blogging platform with a Hono backend and a React frontend, integrated with Prisma.",
+      technologies: ["Hono", "React", "Prisma"],
+      githubUrl: "https://github.com/kcdevv/blogsite-backend-hono"
+    },
+    {
+      id: 10,
+      title: "Decentralized Exchange (DEX)",
+      description:
+        "A simple example demonstrating how a decentralized exchange works.",
+      technologies: ["Node.js", "Express", "Web3.js"],
+      githubUrl: "https://github.com/kcdevv/dex",
     },
   ];
 
@@ -76,14 +104,21 @@ const Projects: React.FC = () => {
           <div className="inline-block px-3 py-1 bg-accent rounded-full text-sm font-medium text-primary mb-4 animate-fade-in">
             Portfolio
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1
+            className="text-4xl md:text-5xl font-bold mb-5 animate-fade-in"
+            style={{ animationDelay: "0.1s" }}
+          >
             My Projects
           </h1>
-          <p className="text-lg text-muted-foreground animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Explore my work in web development, blockchain, and financial technology
+          <p
+            className="text-lg text-muted-foreground animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Explore my work in web development, blockchain, and financial
+            technology
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard
