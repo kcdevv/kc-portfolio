@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow py-8">
         <div 
           key={location.pathname}
           className={`animate-fade-in ${isHome ? 'pt-0' : 'pt-24'}`}
